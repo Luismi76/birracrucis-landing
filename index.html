@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Birracrucis - Organiza rutas de bares con amigos. Geolocalización, contador de rondas, bote compartido y mucho más.">
+  <meta name="keywords" content="ruta de bares, bar crawl, cerveza, amigos, geolocalización, España">
+  <meta name="author" content="Birracrucis">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Birracrucis - Tu ruta de bares perfecta">
+  <meta property="og:description" content="Planifica y disfruta rutas de bares con amigos. Check-in automático, contador de rondas y bote compartido.">
+  <meta property="og:image" content="assets/logo.png">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Birracrucis - Tu ruta de bares perfecta">
+  <meta name="twitter:description" content="Planifica y disfruta rutas de bares con amigos.">
+
+  <title>Birracrucis - Organiza tu ruta de bares perfecta</title>
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <a href="#" class="logo">
+        <img src="assets/logo.png" alt="Birracrucis Logo">
+        <span>Birracrucis</span>
+      </a>
+      <nav id="nav">
+        <a href="#features">Funciones</a>
+        <a href="#how-it-works">Cómo funciona</a>
+        <a href="#pwa">Instalar</a>
+        <a href="#APP_URL" class="btn btn-primary">Entrar</a>
+      </nav>
+      <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span>Disponible ahora</span>
+        </div>
+        <h1>Tu <span>ruta de bares</span> perfecta</h1>
+        <p>Planifica, comparte y disfruta rutas de bares con amigos. Con check-in automático, contador de rondas y bote compartido.</p>
+        <div class="hero-buttons">
+          <a href="#APP_URL" class="btn btn-primary btn-large">
+            Empezar gratis
+          </a>
+          <a href="#how-it-works" class="btn btn-secondary btn-large">
+            Cómo funciona
+          </a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <span class="floating-emoji">🍺</span>
+        <span class="floating-emoji">📍</span>
+        <span class="floating-emoji">👥</span>
+        <div class="phone-mockup">
+          <div class="phone-screen">
+            <div class="phone-header">
+              <h4>Ruta del Viernes</h4>
+              <p>4 bares · 6 participantes</p>
+            </div>
+            <div class="phone-content">
+              <div class="phone-card">
+                <div class="phone-card-icon">📍</div>
+                <div class="phone-card-text">
+                  <h5>Bar La Esquina</h5>
+                  <p>Actual · 3 rondas</p>
+                </div>
+              </div>
+              <div class="phone-card">
+                <div class="phone-card-icon">🍺</div>
+                <div class="phone-card-text">
+                  <h5>Contador de bebidas</h5>
+                  <p>12 cervezas, 4 vinos</p>
+                </div>
+              </div>
+              <div class="phone-card">
+                <div class="phone-card-icon">💰</div>
+                <div class="phone-card-text">
+                  <h5>Bote compartido</h5>
+                  <p>45€ restantes</p>
+                </div>
+              </div>
+              <div class="phone-card">
+                <div class="phone-card-icon">👥</div>
+                <div class="phone-card-text">
+                  <h5>Todos aquí</h5>
+                  <p>6/6 en el bar</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="features-header">
+        <h2>Todo lo que necesitas para tu ruta</h2>
+        <p>Funcionalidades pensadas para que solo te preocupes de pasarlo bien.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📍</div>
+          <h3>Check-in automático</h3>
+          <p>La app detecta cuando llegas al bar usando geolocalización. Sin hacer nada, quedas registrado.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🗺️</div>
+          <h3>Mapa interactivo</h3>
+          <p>Busca bares con Google Maps, planifica tu ruta y ve dónde están tus amigos en tiempo real.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🍺</div>
+          <h3>Contador de rondas</h3>
+          <p>Lleva la cuenta de las cervezas, vinos o lo que sea. Por persona y por bar.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💰</div>
+          <h3>Bote compartido</h3>
+          <p>Gestiona el dinero común del grupo. Añade pagos, controla gastos, sin líos.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💬</div>
+          <h3>Chat en tiempo real</h3>
+          <p>Comunicación instantánea con tu grupo. Coordina sin salir de la app.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📸</div>
+          <h3>Fotos compartidas</h3>
+          <p>Captura los mejores momentos y compártelos con todos los participantes.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⭐</div>
+          <h3>Valoraciones</h3>
+          <p>Puntúa cada bar al final. Guarda tus favoritos para futuras rutas.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎟️</div>
+          <h3>Invitaciones fáciles</h3>
+          <p>Comparte un código o enlace y tus amigos se unen en segundos.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📄</div>
+          <h3>Exportar PDF</h3>
+          <p>Descarga un resumen de tu ruta con todos los detalles para recordar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="how-it-works-header">
+        <h2>Así de fácil</h2>
+        <p>En 3 pasos tienes tu ruta lista.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Crea tu ruta</h3>
+          <p>Busca bares en el mapa, añádelos a tu ruta y configura las opciones que quieras.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Invita a tus amigos</h3>
+          <p>Comparte el código o enlace de invitación por WhatsApp, Telegram o donde quieras.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>¡A disfrutar!</h3>
+          <p>La app se encarga del resto: check-ins, contadores, ubicaciones y fotos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Highlights Section -->
+  <section class="highlights">
+    <div class="container">
+      <div class="highlights-header">
+        <h2>Pensado para pasarlo bien</h2>
+        <p>Sin complicaciones, solo diversión</p>
+      </div>
+      <div class="highlights-grid">
+        <div class="highlight-item">
+          <div class="highlight-icon">🎯</div>
+          <h3>50m</h3>
+          <p>Radio de check-in automático</p>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-icon">⚡</div>
+          <h3>Tiempo real</h3>
+          <p>Actualizaciones instantáneas</p>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-icon">🔒</div>
+          <h3>GDPR</h3>
+          <p>Datos protegidos (LOPD)</p>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-icon">📱</div>
+          <h3>PWA</h3>
+          <p>Instálala como app nativa</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PWA Section -->
+  <section class="pwa-section" id="pwa">
+    <div class="container">
+      <div class="pwa-content">
+        <div class="pwa-text">
+          <h2>Instálala en tu móvil</h2>
+          <p>Birracrucis es una Progressive Web App. Funciona como una app nativa pero sin ocupar espacio ni pasar por tiendas de apps.</p>
+          <ul class="pwa-features">
+            <li>Sin descargas de tiendas de apps</li>
+            <li>Funciona sin conexión</li>
+            <li>Notificaciones push</li>
+            <li>Acceso directo desde tu pantalla</li>
+            <li>Siempre actualizada</li>
+          </ul>
+          <a href="#APP_URL" class="btn btn-primary">Abrir la app</a>
+        </div>
+        <div class="pwa-visual">
+          <div class="install-demo">
+            <img src="assets/logo.png" alt="Birracrucis App">
+            <h4>Birracrucis</h4>
+            <p>Añadir a pantalla de inicio</p>
+            <button class="btn btn-primary">Instalar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="container">
+      <h2>¿Listo para tu próxima ruta?</h2>
+      <p>Únete gratis y organiza tu primera ruta de bares en minutos.</p>
+      <a href="#APP_URL" class="btn btn-secondary btn-large">Crear mi primera ruta</a>
+      <p class="cta-note">100% gratis · Sin tarjeta de crédito</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <img src="assets/logo.png" alt="Birracrucis">
+            <span>Birracrucis</span>
+          </a>
+          <p>Planifica tu ruta de bares perfecta y disfruta con amigos.</p>
+        </div>
+        <div class="footer-links">
+          <h4>App</h4>
+          <ul>
+            <li><a href="#features">Funciones</a></li>
+            <li><a href="#how-it-works">Cómo funciona</a></li>
+            <li><a href="#pwa">Instalar</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#APP_URL/legal/privacidad">Privacidad</a></li>
+            <li><a href="#APP_URL/legal/terminos">Términos</a></li>
+            <li><a href="#APP_URL/legal/cookies">Cookies</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="mailto:hola@birracrucis.com">hola@birracrucis.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Birracrucis. Todos los derechos reservados.</p>
+        <div class="responsibility-note">
+          <span>🍺</span>
+          <span>Bebe con responsabilidad</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    function toggleMenu() {
+      document.getElementById('nav').classList.toggle('active');
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href.startsWith('#') && !href.includes('APP_URL')) {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('nav').classList.remove('active');
+          }
+        }
+      });
+    });
+
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 50) {
+        header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+      } else {
+        header.style.boxShadow = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
