@@ -3,6 +3,9 @@ FROM nginx:alpine
 # Eliminar la configuración por defecto de Nginx
 RUN rm /etc/nginx/conf.d/default.conf
 
+# Instalar curl para el healthcheck
+RUN apk add --no-cache curl
+
 # Copiar nuestra configuración personalizada
 COPY nginx.conf /etc/nginx/conf.d/
 
