@@ -1,10 +1,18 @@
 FROM nginx:alpine
 
-# Copiar el contenido estático al directorio predeterminado de Nginx
+# Eliminar la configuración por defecto de Nginx
+RUN rm /etc/nginx/conf.d/default.conf
+
+# Copiar nuestra configuración personalizada
+COPY nginx.conf /etc/nginx/conf.d/
+
+# Copiar el contenido estático
 COPY . /usr/share/nginx/html
+
+# Asegurar permisos correctos (importante cuando se construye desde Windows)
+RUN chmod -R 755 /usr/share/nginx/html
 
 # Exponer el puerto 80
 EXPOSE 80
 
-# Iniciar Nginx
 CMD ["nginx", "-g", "daemon off;"]
