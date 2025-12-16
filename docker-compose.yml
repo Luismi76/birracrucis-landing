@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  web:
+    build: .
+    container_name: birracrucis-landing
+    restart: always
+    expose:
+      - "80"
+    # Coolify se encargará de las labels de Traefik basándose en la configuración de la UI
+    # pero definir el puerto expuesto ayuda a que identifique el puerto interno correcto.
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:80/" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
