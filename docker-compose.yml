@@ -12,9 +12,9 @@ services:
       retries: 3
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.birracrucis-landing.rule=Host(`queesbirracrucis.lmsc.es`)"
-      - "traefik.http.routers.birracrucis-landing.entrypoints=http"
-      - "traefik.http.services.birracrucis-landing.loadbalancer.server.port=80"
+      - "traefik.http.routers.queesbirracrucis.rule=Host(`queesbirracrucis.lmsc.es`)"
+      - "traefik.http.routers.queesbirracrucis.entrypoints=http"
+      - "traefik.http.services.queesbirracrucis.loadbalancer.server.port=80"
 
 networks:
   default:
