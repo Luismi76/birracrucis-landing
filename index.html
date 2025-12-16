@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8">
@@ -8,6 +8,29 @@
     content="Birracrucis - Organiza rutas de bares con amigos. Geolocalización, contador de rondas, bote compartido, rutas públicas, modo descubrimiento y mucho más.">
   <meta name="keywords" content="ruta de bares, bar crawl, cerveza, amigos, geolocalización, España">
   <meta name="author" content="Birracrucis">
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Birracrucis",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "Web, Android, iOS",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "description": "Organiza rutas de bares con amigos. Geolocalización, contador de rondas, bote compartido y mucho más.",
+      "image": "https://queesbirracrucis.lmsc.es/assets/logo.png",
+      "screenshot": "https://queesbirracrucis.lmsc.es/assets/screenshot-ruta.jpg",
+      "author": {
+          "@type": "Person",
+          "name": "Luis Miguel"
+      }
+    }
+  </script>
 
   <!-- Open Graph -->
   <meta property="og:title" content="Birracrucis - Tu ruta de bares perfecta">
@@ -212,6 +235,109 @@
     </div>
   </section>
 
+  <!-- Testimonials Section -->
+  <section class="testimonials fade-up" id="testimonials">
+    <div class="container">
+      <div class="testimonials-header">
+        <h2>Lo que dicen los usuarios</h2>
+        <p>Gente real pasándolo bien (y que se acuerda de lo que pasó gracias a la app)</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>"Antes hacíamos un bote en efectivo y siempre faltaba dinero. Con Birracrucis clavamos las cuentas cada
+              vez. ¡Imprescindible!"</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">👨🏻</div>
+            <div class="author-info">
+              <h5>Carlos M.</h5>
+              <span>Organizador de despedidas</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>"La función de compartir ubicación es genial para encontrar a los que se pierden entre bar y bar. Y el
+              contador de rondas... ojos que no ven, app que registra."</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">👩🏼</div>
+            <div class="author-info">
+              <h5>Ana R.</h5>
+              <span>Usuario Top</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>"Me encanta poder ver rutas de otra gente en mi ciudad. Descubrí bares que no conocía al lado de casa
+              gracias al modo exploración."</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">🧔🏾</div>
+            <div class="author-info">
+              <h5>Javi G.</h5>
+              <span>Explorador Urbano</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq fade-up" id="faq">
+    <div class="container">
+      <div class="faq-header">
+        <h2>Preguntas Frecuentes</h2>
+        <p>Resolvemos tus dudas antes de la primera ronda</p>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿Es realmente gratis?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Sí, Birracrucis es 100% gratis para organizar rutas y unirte a ellas. Sin suscripciones ni costes
+              ocultos.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿Necesito descargar algo?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>No necesariamente. Birracrucis es una Web App Progresiva (PWA). Puedes usarla directamente en el
+              navegador o instalarla como acceso directo en tu móvil sin pasar por la tienda.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿Cómo funciona el bote compartido?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Es un registro virtual. Cada uno apunta lo que pone y la app calcula quién debe a quién al final. ¡Adiós
+              a los líos de efectivo!</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿Puedo hacer rutas privadas?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>¡Claro! Por defecto las rutas pueden ser privadas solo para tus invitados. Si quieres, puedes hacerlas
+              públicas para la comunidad.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Screenshots Gallery -->
   <section class="screenshots" id="screenshots">
     <div class="container">
@@ -392,10 +518,39 @@
     window.addEventListener('scroll', () => {
       const header = document.querySelector('header');
       if (window.scrollY > 50) {
-        header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+        header.classList.add('header-scrolled');
       } else {
-        header.style.boxShadow = 'none';
+        header.classList.remove('header-scrolled');
       }
+    });
+
+    // Intersection Observer for Scroll Animations
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // Only animate once
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-up, .feature-card, .step, .screenshot-item, .hero-content, .hero-image').forEach(el => {
+      el.classList.add('fade-up-init');
+      observer.observe(el);
+    });
+
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.parentElement;
+        item.classList.toggle('active');
+      });
     });
   </script>
 </body>
